@@ -12,11 +12,13 @@ phases:
   pre_build:
     commands:
       - echo Executing Pre build Phase
+      - npm install
     finally:
       - echo Executing Pre build finally
   build:
     commands:
       - echo Executing  build Phase
+      - npm run build:ci
     finally:
       - echo Executing build finally 
   post_build:
